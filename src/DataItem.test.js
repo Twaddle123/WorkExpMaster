@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import DataItem from './DataItem';
+import App from './App';
 
 function checkElement(theText, theTag)
 {
@@ -8,14 +9,14 @@ function checkElement(theText, theTag)
     expect(linkElement.tagName).toBe(theTag);
 }
 
-test('renders header text', () => {
+test('renders data', () => {
 
   var data = { "name": "hammer",      "pic": "hammer_medium.jpg",      "size": "medium", "department": "tools", "price": 12.50};
 
   render(<DataItem product={data}/>);
-  checkElement("Name: hammer", "P");
-  checkElement("Size: medium", "P");
-  checkElement("Department: tools", "P");
-  checkElement("Proce: 12.5", "P"); 
+  checkElement("Name: Hammer", "SPAN");
+  checkElement("Size: Medium", "P");
+  checkElement("Department: Tools", "P");
+  checkElement("Price: £12.50", "SPAN"); 
 
 });

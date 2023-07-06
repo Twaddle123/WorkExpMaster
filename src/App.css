@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #6170fb;
+  color: #6170fb
 }
 
 .App-link {
@@ -23,9 +23,12 @@
 }
 
 h1 {
-  color: #61dafb;
+  color: #6170fb;
 }
 
+.bigtext {
+  font-size : 40px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -34,3 +37,111 @@ h1 {
     transform: rotate(360deg);
   }
 }
+
+.column {
+  float: left;
+  width: 20%;
+  padding: 60px
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  
+}
+
+.row {
+  border: 1px solid #000;
+}
+.product_img {
+  border: 1px solid #000;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: white;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding : 10px;
+  text-align: center;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -150px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity:1;
+}
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.Dropsort {
+  display: inline;
+}
+
+
+select{
+  background-color: #606060;
+  color: white;
+  font-size: 1.25rem;
+  border-radius: 2px;
+  outline: 2px solid black;
+  padding: 2px;
+}
+
+h1 {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 10px;
+  width: 100%;
+}
+
+h1>elementright {
+  margin-right: 5%;
+}
+
+.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 200;
+}
+
